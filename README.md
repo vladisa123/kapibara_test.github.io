@@ -1,11 +1,11 @@
 # Kapi test CRUD site
 
 
-* Notions:
+* Notes:
 ```
-.env file was exclude (all DB credetinals served om vercel)
+.env file was excluded (all DB credetinals served om vercel)
 
-db served on https://www.elephantsql.com/
+db severed on https://www.elephantsql.com/
 
-site page served on https://kapibara-test-github-io.vercel.app/
+site page severed on https://kapibara-test-github-io.vercel.app/
 ```
