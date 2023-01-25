@@ -1,5 +1,11 @@
 <?php
 
+
+?>
+    <pre>
+<?php var_dump($_ENV); ?>
+    </pre>
+<?php
 try {
 //    $pdo = new PDO('postgres:db');
 //    $pdo = new PDO('mysql:dbname=test; host=localhost', 'root', '');

@@ -12,9 +12,6 @@ include 'func.php';
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 <body>
-<!--<pre>-->
-<?php //var_dump($users); ?>
-<!--</pre>-->
 <div class="container">
     <div class="row">
         <div class="col mt-1">
