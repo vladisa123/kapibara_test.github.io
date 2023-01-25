@@ -37,10 +37,7 @@
                         <select class="form-control" name="edit_city">
                             <?php foreach ($cities as $city) { ?>
                                 <option value="<?=$city['id']?>"
-                                    <?php foreach ($users as $user) {
-                                        if ($user['city'] == $city['id']) { ?>
-                                            selected
-                                        <?php } ?>
+                                    <?php if ($user['city_id'] == $city['id']) { ?> selected
                                     <?php } ?>
                                 ><?= $city['name']?>
                                 </option>

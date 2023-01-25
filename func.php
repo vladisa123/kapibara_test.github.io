@@ -30,8 +30,14 @@ if (isset($_POST['submit'])) {
     }
 }
 
+
+
+
 // Read User
-$sql = $pdo->prepare("SELECT * FROM `users`");
+$sql = $pdo->prepare("SELECT users.id, users.name, users.city, city.id AS city_id,  city.name AS city_name FROM users
+   LEFT JOIN cities city on users.city = city.id
+   GROUP BY users.id");
+
 $sql->execute();
 $users = $sql->fetchAll();
 

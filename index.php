@@ -1,6 +1,7 @@
 <?php
 include 'func.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,9 @@ include 'func.php';
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 <body>
-<pre>
-<?php var_dump($users); ?>
-</pre>
+<!--<pre>-->
+<?php //var_dump($users); ?>
+<!--</pre>-->
 <div class="container">
     <div class="row">
         <div class="col mt-1">
@@ -32,7 +33,7 @@ include 'func.php';
                     <tr>
                         <td><?=$user['id'] ?></td>
                         <td><?=$user['name'] ?></td>
-                        <td><?=$user['city'] ?></td>
+                        <td><?=$user['city_name'] ?></td>
                         <td>
                             <a href="?edit=<?=$user['id'] ?>" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal<?=$user['id'] ?>"><i class="fa fa-edit"></i></a>
                             <a href="?delete=<?=$user['id'] ?>" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal<?=$user['id'] ?>"><i class="fa fa-trash"></i></a>
