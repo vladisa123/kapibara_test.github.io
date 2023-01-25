@@ -11,7 +11,7 @@ if ($name == ""){
 // Create User
 if (isset($_POST['submit'])) {
     try {
-        $sql = ("INSERT INTO `users`(`name`,`city`) VALUES(?,?)");
+        $sql = ("INSERT INTO users(name,city) VALUES(?,?)");
         $query = $pdo->prepare($sql);
         $query->execute([$name, $city]);
         $success = '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -34,15 +34,15 @@ if (isset($_POST['submit'])) {
 
 
 // Read User
-$sql = $pdo->prepare("SELECT users.id, users.name, users.city, city.id AS city_id,  city.name AS city_name FROM users
+$sql = $pdo->prepare("SELECT users.id, users.name, city.id AS city_id, city.name AS city_name FROM users
    LEFT JOIN cities city on users.city = city.id
-   GROUP BY users.id");
+   GROUP BY users.id, city.id");
 
 $sql->execute();
 $users = $sql->fetchAll();
 
 // Read Cities
-$sql = $pdo->prepare("SELECT * FROM `cities`");
+$sql = $pdo->prepare("SELECT * FROM cities");
 $sql->execute();
 $cities = $sql->fetchAll();
 
