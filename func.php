@@ -37,7 +37,6 @@ if (isset($_POST['submit'])) {
 $sql = $pdo->prepare("SELECT users.id, users.name, city.id AS city_id, city.name AS city_name FROM users
    LEFT JOIN cities city on users.city = city.id
    GROUP BY users.id, city.id");
-
 $sql->execute();
 $users = $sql->fetchAll();
 
