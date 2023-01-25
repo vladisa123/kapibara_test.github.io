@@ -7,5 +7,5 @@
 
 db served on https://www.elephantsql.com/
 
-site page served on https://vercel.com
+site page served on https://kapibara-test-github-io.vercel.app/
 ```
