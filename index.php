@@ -26,6 +26,7 @@ include 'func.php';
                     <th>Имя</th>
                     <th>Город</th>
                     <th>Действие</th>
+
                 </tr>
                 <?php foreach ($users as $user) { ?>
                     <tr>
